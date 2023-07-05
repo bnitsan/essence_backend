@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y12ZYKLWR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9Y12ZYKLWR');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essence is a Chrome extension for useful summarization in styles such as travel, business and academic. It also allows webpage question answering and exporting to spreadsheets and Notion.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="/static/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick-1.8.1/slick/slick.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick-1.8.1/slick/slick-theme.css') }}"/>
+    <title>Essence Home</title>
+  </head>
+  <br></br><br></br>
+
+  <body style="text-align: center;">
+    <h1 class="App-title">Essence</h1>
+    <img src="/static/logo.png" width="150" height="150" alt="Logo">
+    <h1 class="App-subtitle"><button class="chrome-ext" onclick="window.location.href='https://chrome.google.com/webstore/detail/essence-distill-and-colle/agokfbniiemgojbmdbhijmhfppgeaeal'">See the Chrome extension!</button></h1>
+
+    
+    <div class="wrapper">
+      <div class="carousel">
+        <div><img src="/static/image4.png" alt="Example of academic summary performance"></div>
+        <div><img src="/static/image2.png" alt="Example of business summary performance"></div>
+        <div><img src="/static/image3.png" alt="Example of travel summary performance"></div>
+        <div><img src="/static/image5.png" alt="Example of travel transportation summary performance"></div>
+        <div><img src="/static/image6.png" alt="Example of startup business summary performance"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').slick({
+        slidesToShow: 1,
+        dots:true,
+        centerMode: true,
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/static/slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slider').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          variableWidth: true,
+          centerMode: true,
+          centerPadding: '60px',
+        });
+      });
+    </script>
+    <h2 class="App-subtitle">Contact us at <a href="mailto:support@essence.fyi">support@essence.fyi</a></h2>
+      <br />
+    </body>
+</html>

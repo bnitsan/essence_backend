@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  flask_app:
+    container_name: flask_app
+    restart: always
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - /home/user/essence/data:/data
+    environment:
+      SECRET_HF_MODEL_KEY: ${SECRET_HF_MODEL_KEY}
+      DEBUG_FLAG: ${DEBUG_FLAG}
+      ESSENCE_DATA_PATH: ${ESSENCE_DATA_PATH}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      TWITTER_BEARER_TOKEN: ${TWITTER_BEARER_TOKEN}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      NOTION_KEY: ${NOTION_KEY}
+      NOTION_CLIENT_ID: ${NOTION_CLIENT_ID}
+      NOTION_CLIENT_SECRET: ${NOTION_CLIENT_SECRET}
+      UPDATE_QUOTA_CODE: ${UPDATE_QUOTA_CODE}
+      AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT}
+      AZURE_OPENAI_KEY: ${AZURE_OPENAI_KEY}
+    command: gunicorn -w 5 -b 0.0.0.0:8000 app:app --timeout 180
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /home/user/essence/data:/data
+    depends_on:
+      - flask_app

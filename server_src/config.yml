@@ -1,0 +1,29 @@
+config:
+    "INF_ENDPOINT_SENT_TRANS": "http://localhost:5000"    # server that does inference on a sentence transformer
+    "MODEL": "gpt-3.5-turbo"                              # Either chatgpt, davinci or gpt-4
+    "QA_MODEL": "gpt-3.5-turbo"                           # Similar to MODEL, but decoding question queries
+    "MULTIPLE_PASSES_MAX_TOKENS": 1024                    # max tokens when running multiple passes (it usually makes output longer.)
+    "COMPLETION_TIMEOUT": 60                              # time in seconds for request to OPENAI to throw an exception
+    "final_char_index": 10000                             # max number of characters as initial guess for input into GPT
+    "chars_to_decrease_on_decline": 777                   # when the completion API fails, decrease every round by this number of characters
+    "min_char_input_text_line": 10                        # stick somewhere in scraping_utils
+    "max_req_to_server": 7                                # max requests for OPENAI server; stop after
+    "ERROR_NOT_ENOUGH_PARAMS": {"output": "ERROR. Not enough parameters provided."}     # not enough parameters supplied to method error
+    "ERROR_NOT_IMPLEMENTED": {"output": "ERROR. Not implemented yet."}                  # not implemented yet error
+    "BULLETS_GENERIC_STYLE_NAME": "bulletsgeneric"
+    "TABULARIZE_STYLE_NAME": "tabularize"
+    "MAX_GPT_PASSES" : 3                                  # Maximal subsequent amount of times GPT can be called
+    "MIN_SENTENCE_LEN_QA_EMBED": 5                        # minimal number of characters per sentence to be considered in embedding for QA (questions-answers) model
+    "MAX_SENTENCE_LEN_QA_EMBED": 2000                     # maximal number of characters per sentence to be considered in embedding for QA (questions-answers) model
+    "SENTENCE_QA_EMBED_MODEL": "text-embedding-ada-002"   # model for embeddings, OpenAI-based
+    "CACHE_QA_SECONDS": 2678400                           # number of seconds of QA caching
+    "CACHE_QA_THRESHOLD": 1000                            # max number of elements in QA cache
+    "TIME_DIFF_USER_REQ_SEC": 3                           # time between user requests to avoid spamming 
+    "CACHE_URL_SECONDS": 2678400                          # number of seconds of QA caching
+    "CACHE_URL_THRESHOLD": 1000                           # max number of elements in QA cache
+    "MIN_SCRAPING_LENGTH": 250                            # minimal number of characters in aftermath of justext/trafilutara
+    "MIN_SCRAPING_LENGTH_JS": 680                         # a second minimal length, when text also contains references to JS/other blocking
+    "MIN_MARKED_TEXT_LENGTH": 50                          # minimal number of characters to be considered in marked text processing
+    "SENT_TOKEN_PROTECTED": {'e.g.': 'e-g-', 'i.e.': 'i-e-', 'et al.': 'et al'}
+    "MAX_CHAR_LEN_QA": 200000                             # max characters to embed in questions
+    "DEBUG_USERNAME": "particularuser@address.com"        # if username matches this, print it

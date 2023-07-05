@@ -1,0 +1,384 @@
+/*
+#background {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+  filter: contrast(150%) blur(5px) grayscale(50%) hue-rotate(40deg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+
+.ColorPalette {
+  --color1: #95DBE5FF;
+  --color2: #078282FF;
+  --color3: #339E66FF;
+  --BGcolor: #F6F6F6;
+  --ButtonGenericBG-color: #004A55;/*#0095ff;*/
+  --ButtonGeneric-color: #fff;
+  --TextColor: #004A55;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #F6F6F6;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.App-logo-spin {
+  animation: App-logo-spin infinite 3s linear;
+  height: 45px;
+}
+
+.App-logo {
+  height: 45px;
+}
+
+.App-BG {
+  background-color: rgb(0,22,36); /* #40C4DA; */
+}
+
+.App-header {
+  background-color: var(--BGcolor); /* rgb(42,210,253);*/ /* #40C4DA; */
+  border-radius: 25px;
+  height: 100px;
+  padding: 20px;
+  color: #004A55;
+}
+
+.App-title {
+  font-size: 1.5em;
+  font-family: Roboto, Lucida Grande, Verdana, Arial, sans-serif;
+}
+
+.App-subtitle {
+  font-size: 1.0em;
+  font-family: Roboto, Lucida Grande, Verdana, Arial, sans-serif;
+}
+
+.TextTopRight-style{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+  color: rgb(59, 55, 55);
+}
+
+.TopTable-style{
+  text-align: left;
+}
+
+.TopTableRight-style{
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: rgb(59, 55, 55);
+}
+
+.App-intro {
+  font-size: large;
+  font-family: Helvetica, sans-serif, Arial;
+  color: blanchedalmond;
+}
+
+.App-general {
+  font-size: medium;
+  font-family: Helvetica, sans-serif, Arial;
+  color: blanchedalmond;
+}
+
+.App-general-left {
+  font-size: medium;
+  font-family: Helvetica, sans-serif, Arial;
+  color: blanchedalmond;
+  text-align: left;
+}
+
+.App-general-left-whitish {
+  font-size: medium;
+  font-family: Helvetica, sans-serif, Arial;
+  color: rgb(239, 239, 239);
+  text-align: left;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
+
+.App-general-whitish {
+  font-size: medium;
+  font-family: Helvetica, sans-serif, Arial;
+  color: rgb(239, 239, 239);
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
+
+
+.TextArea-style{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(238, 240, 243);
+  color: rgb(59, 55, 55);
+}
+
+.TextAreaQuestion-style{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  width: 220px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(238, 240, 243);
+  color: rgb(59, 55, 55);
+}
+
+.AreaGeneric-style{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 6px;
+  min-height: 20px;
+  font-size: 17px;
+  padding: 0.32em;
+  margin: 0.4em;
+}
+
+.OutputTable-style{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 6px;
+  min-height: 20px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(238, 240, 243);
+  color: rgb(59, 55, 55);
+  text-align: left;
+}
+
+.FirstColumn-style{
+  max-width: 86px;
+  word-wrap: break-word;
+}
+
+.InnerOutputTable-style{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 6px;
+  min-height: 20px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(59, 55, 55);
+  text-align: left;
+  border-left: 1px solid rgb(219, 35, 35);
+}
+
+
+/*
+.ButtonGeneric-style{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: rgb(59, 154, 243);
+  color: var(--color2);
+}
+*/
+
+.Keypoint-style{
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(239, 239, 239);
+}
+
+.Disclaimer-style{
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(239, 239, 239);
+}
+
+.ListSubjects-style{
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(102, 198, 87);
+  text-align: left;
+  margin-left: -10px;
+}
+
+.ListContents-style{
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(163, 205, 169);
+  text-align: left;
+  margin-left: -10px;
+}
+
+.ButtonGeneric-style {
+  background-color: #004A55;
+  border: 1px solid transparent;
+  /*border-radius: 16px;*/
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 1px;
+  margin-bottom: 6px;
+  margin-top:5px;
+  outline: none;
+  padding: 5px .7em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.ButtonGeneric-style:hover,
+.ButtonGeneric-style:focus {
+  background-color: #07c;
+}
+
+.ButtonGeneric-style:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.ButtonGeneric-style:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+.ButtonGeneric-style:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: default;
+}
+
+.popup-content {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(22, 33, 44);
+  background-color: #0064bd;
+}
+
+.slider img {
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
+}
+.slick-prev {
+    left: -50px;
+}
+.slick-next {
+    right: -50px;
+}
+
+.wrapper{
+  width:100%;
+  padding-top: 20px;
+  text-align:center;
+}
+/*
+h2{
+  font-family:sans-serif;
+  color:#fff; 
+}*/
+.carousel{
+  width:90%;
+  max-width: 1280px;
+  margin:0px auto;
+}
+.slick-slide{
+  margin:10px;
+}
+.slick-slide img{
+  width:100%;
+  border: 2px solid #fff;
+}
+.wrapper .slick-dots li button:before {
+  font-size:20px;
+  color:white;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Set the arrow color to red */
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  color: #F87D09;
+  background-color: #F87D09;
+  width: 20px;
+}
+
+/* Change the arrow background to green on hover */
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
+  color: #004A55;
+  background-color: #004A55;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+
+button.chrome-ext {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out; /* Add transition for smooth hover effect */
+}
+
+button.chrome-ext:hover {
+  background-color: #388E3C; /* Change background color on hover */
+}
+
+button.chrome-ext:focus {
+  outline: none; /* Remove outline when button is focused */
+}

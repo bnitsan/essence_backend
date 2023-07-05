@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "==2.2.2"
+flask-cors = "==3.0.10"
+flask-jwt-extended = "==4.4.4"
+flask-sqlalchemy = "==3.0.2"
+justext = "==3.0.0"
+nltk = "==3.8"
+numpy = "==1.21.5"
+openai = "==0.24.0"
+py-bcrypt = "*"
+pyyaml = "==6.0"
+requests = "*"
+scikit-learn = "==1.2.0"
+textract = "==1.6.5"
+trafilatura = "*"
+pyopenssl = "*"
+langdetect = "*"
+waitress = "*"
+gunicorn = "~=20.0"
+tweepy = "*"
+cachelib = "*"
+gevent = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

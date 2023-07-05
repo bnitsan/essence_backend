@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="/static/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick-1.8.1/slick/slick.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick-1.8.1/slick/slick-theme.css') }}"/>
+    <title>Essence Index</title>
+  </head>
+  <br></br><br></br>
+
+  <body style="text-align: center;">
+    <h1 class="App-title">Essence</h1>
+    <img src="/static/logo.png" width="150" height="150" alt="Logo">
+    <h2 class="App-subtitle">Request access!</h2>
+    
+    <form action="/requestaccess" method="post">
+        <input type="text" id="email" name="email" style="width: 15em; height: 2em; border: none; font-size: 16px; padding: 7px; margin: 0; border-radius: 5px;" placeholder="Enter e-mail..."><br>
+        <button class="ButtonGeneric-style" type="submit">Submit</button>
+    </form>
+    <script>
+        $('form').submit(function(event) {
+          event.preventDefault();
+          $.ajax({
+            url: '/requestaccess',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ email: $('#email').val(), list_name: 'index' }),
+            success: function(response) {
+              console.log(response);
+              alert('Output: ' + response['output']);
+            }
+          });
+        });
+      </script>
+      <br></br>
+      <h1 class="App-subtitle">Examples of full functionality on Chrome:</h2>
+
+      <div class="wrapper">
+            <div class="carousel">
+              <div><img src="/static/image1.png"></div>
+              <div><img src="/static/image2.png"></div>
+              <div><img src="/static/image3.png"></div>
+              <div><img src="/static/image4.png"></div>
+              <div><img src="/static/image5.png"></div>
+              <div><img src="/static/image6.png"></div>
+              <div><img src="/static/image7.png"></div>
+            </div>
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.carousel').slick({
+          slidesToShow: 1,
+          dots:true,
+          centerMode: true,
+          });
+        });
+      </script>
+
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="/static/slick-1.8.1/slick/slick.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            variableWidth: true,
+            centerMode: true,
+            centerPadding: '60px',
+          });
+        });
+      </script>
+      <br />
+      <h2 class="App-subtitle">Contact us at <a href="mailto:support@essence.fyi">support@essence.fyi</a></h2>
+      <br />
+      </body>
+</html>
