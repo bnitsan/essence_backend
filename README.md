@@ -1,6 +1,6 @@
 # Essence backend for a Chrome extension and a simple website
 
-See [essence.fyi/chrome](URL) for a demo of the extension.
+See the [related frontend code](https://github.com/bnitsan/essence_frontend).
 
 ## Usage
 
